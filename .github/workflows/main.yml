@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: greet
         id: hello
-        uses: actions/hello-world-docker-action
+        uses: ./.github/actions/hello-world-docker-action
         with:
           who-to-greet: "Romeo"
 
