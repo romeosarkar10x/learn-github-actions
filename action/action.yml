@@ -1,0 +1,18 @@
+name: "greet-docker-action"
+descrption: "Greet someone and record the time."
+
+inputs:
+  who-to-greet:
+    description: "Who to greet"
+    required: true
+    default: "World"
+  
+outputs:
+  time:
+    description: "The time we greeted you."
+  
+runs:
+  using: "docker"
+  image: "dockerfiles/greet-docker-action/Dockerfile"
+  args:
+    - ${{ inputs.who-to-greet }}
