@@ -6,6 +6,7 @@ inputs:
     description: "Who to greet"
     required: true
     default: "World"
+  secrets:
   
 outputs:
   time:
