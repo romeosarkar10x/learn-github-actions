@@ -5,4 +5,8 @@ time=$(date)
 
 env
 
-echo "time=${time}" >> ${GITHUB_OUTPUT}
+echo "TIME=${time}" >> ${GITHUB_OUTPUT}
+
+echo "Working Directory: $(pwd)"
+echo "List: $(ls)"
+echo "Contents of file_1.txt: $(cat file_1.txt)"

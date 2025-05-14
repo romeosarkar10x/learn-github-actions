@@ -2,7 +2,11 @@ FROM alpine:3.10
 
 RUN env | sed 's/./& /g' | sed 's/ $//'
 
-COPY entrypoint.sh /entrypoint.sh
+WORKDIR /root/learn-github-actions
+
+COPY . .
+
+COPY entrypoint.sh entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 RUN <<EOF
