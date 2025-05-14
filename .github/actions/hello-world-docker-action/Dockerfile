@@ -7,7 +7,7 @@ WORKDIR /root/learn-github-actions
 COPY . .
 
 COPY entrypoint.sh entrypoint.sh
-RUN chmod +x /entrypoint.sh
+RUN chmod +x entrypoint.sh
 
 RUN <<EOF
 echo "Hello, from Dockerfile!"
