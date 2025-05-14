@@ -24,3 +24,6 @@ jobs:
         run: |
           ./echo-script "${{ secrets.SECRET_API_KEY_1 }}" "${{ secrets.SECRET_API_KEY_2 }}"
           echo "Done printing secrets!"
+        
+      - name: test-print
+        run: echo "secret-key@1234"
