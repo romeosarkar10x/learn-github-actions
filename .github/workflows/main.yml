@@ -16,3 +16,9 @@ jobs:
 
       - name: get-output-time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+      
+      - name: print-secrets
+        run: |
+          echo "${{ secrets.SECRET_API_KEY_1 }}"
+          echo "${{ secrets.SECRET_API_KEY_2 }}"
+          echo "Done printing secrets!"
