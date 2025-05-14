@@ -1,6 +1,6 @@
 FROM alpine:3.10
 
-RUN --mount=type=secret,id=SECRET_API_KEY_1,env=GITHUB_TOKEN
+RUN --mount=type=secret,id=SECRET_API_KEY_1 cat $(/run/secrets/SECRET_API_KEY_1)
 RUN env
 
 COPY entrypoint.sh /entrypoint.sh
