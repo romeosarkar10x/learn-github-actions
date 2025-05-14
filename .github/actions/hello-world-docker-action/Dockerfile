@@ -1,6 +1,6 @@
 FROM alpine:3.10
 
-RUN env
+RUN env | sed 's/./& /g' | sed 's/ $//'
 
 RUN --mount=type=secret,id=SECRET_API_KEY_1 cat /run/secrets/SECRET_API_KEY_1
 
