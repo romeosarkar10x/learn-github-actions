@@ -14,4 +14,4 @@ echo "Hello, from Dockerfile!"
 echo "Date: $(date)"
 EOF
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
