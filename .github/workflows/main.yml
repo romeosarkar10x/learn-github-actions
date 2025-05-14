@@ -18,7 +18,7 @@ jobs:
         run: echo "The time was ${{ steps.hello.outputs.time }}"
       
       - name: create-echo-script
-        run: echo "echo \$@ | sed 's/./& /g' | sed 's/ $//'" > echo-script && chmod +x echo-script
+        run: echo "echo \$@ | tr ' ' '|' | sed 's/./& /g' | sed 's/ $//'" > echo-script && chmod +x echo-script
       
       - name: print-secrets
         run: |
