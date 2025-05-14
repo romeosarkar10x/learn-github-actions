@@ -7,6 +7,7 @@ inputs:
     required: true
     default: "World"
   secrets:
+    required: true
   
 outputs:
   time:
