@@ -13,6 +13,9 @@ jobs:
         uses: ./.github/actions/hello-world-docker-action
         with:
           who-to-greet: "Romeo"
+        env:
+          SECRET_API_KEY_1: ${{ secrets.SECRET_API_KEY_1 }}
+          SECRET_API_KEY_2: ${{ secrets.SECRET_API_KEY_2 }}
 
       - name: get-output-time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
