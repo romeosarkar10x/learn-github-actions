@@ -26,4 +26,4 @@ jobs:
           echo "Done printing secrets!"
         
       - name: test-print
-        run: echo "secret-key@1234"
+        run: echo "secret-key@123"
